@@ -1,19 +1,28 @@
 # Project Write-Up
 
-You can use this document as a template for providing your project write-up. However, if you
-have a different format you prefer, feel free to use it as long as you answer all required
-questions.
+This project detects humans in a video stream using different models. The models are Tensor Flow models and are used pre-and post conversion to OpenVino projects.  This projects uses the OpenVino toolkit and is written in python. 
 
 ## Explaining Custom Layers
 
-The process behind converting custom layers involves...
+For the process behind converting custom layers for this project, I used extensions that already exist in OpenVino.  The models I used were in the Tensorflow Object Detection Model Zoo.  The extensions are located in eployment_tools/model_optimizer/extensions/front/tf and I found extensions for the two models I used.  
 
-Some of the potential reasons for handling custom layers are...
+The two models/ extensions I used were: 
+sd_inception_v2_coco: ssd_v2_support.json
+faster_rcnn_inception_v2_coco: faster_rcnn_support.json
+
+The full commands are:
+
+python3 /opt/intel/openvino/deployment_tools/model_optimizer/mo.py --input_model ssd_inception_v2_coco_2018_01_28/frozen_inference_graph.pb --tensorflow_object_detection_api_pipeline_config ssd_inception_v2_coco_2018_01_28/pipeline.config --reverse_input_channels --tensorflow_use_custom_operations_config /opt/intel/openvino/deployment_tools/model_optimizer/extensions/front/tf/ssd_v2_support.json
+
+python3 /opt/intel/openvino/deployment_tools/model_optimizer/mo.py --input_model faster_rcnn_inception_v2_coco_2018_01_28/frozen_inference_graph.pb --tensorflow_object_detection_api_pipeline_config faster_rcnn_inception_v2_coco_2018_01_28/pipeline.config --reverse_input_channels --tensorflow_use_custom_operations_config /opt/intel/openvino/deployment_tools/model_optimizer/extensions/front/tf/faster_rcnn_support.json
+
+Some of the potential reasons for handling custom layers are that they may be new models that have layers that are not understood.  
+
 
 ## Comparing Model Performance
 
 My method(s) to compare models before and after conversion to Intermediate Representations
-were...
+were to time the process for each run. 
 
 The difference between model accuracy pre- and post-conversion was...
 
