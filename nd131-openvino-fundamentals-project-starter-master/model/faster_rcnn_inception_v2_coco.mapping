@@ -1,0 +1,1295 @@
+<?xml version="1.0" ?>
+<mapping>
+	<map>
+		<framework name="MaxPool2D/MaxPool" out_port_id="0"/>
+		<IR id="304" name="MaxPool2D/MaxPool" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5b/Branch_2/Conv2d_0c_3x3/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="360" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5b/Branch_2/Conv2d_0c_3x3/BatchNorm/FusedBatchNorm/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3b/Branch_3/Conv2d_0b_1x1/Relu" out_port_id="0"/>
+		<IR id="59" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3b/Branch_3/Conv2d_0b_1x1/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/Conv2d_1a_7x7/pointwise_weights/read/_57__cf__63" out_port_id="0"/>
+		<IR id="7" name="image_tensor/reverse_input_channels/Concat24887_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5c/Branch_0/Conv2d_0a_1x1/Conv2D" out_port_id="0"/>
+		<IR id="370" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5c/Branch_0/Conv2d_0a_1x1/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageBoxPredictor/ClassPredictor/weights/read/_286__cf__292" out_port_id="0"/>
+		<IR id="278" name="FirstStageBoxPredictor/ClassPredictor/weights/read/_286__cf__292/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5c/Branch_1/Conv2d_0a_1x1/Relu" out_port_id="0"/>
+		<IR id="378" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5c/Branch_1/Conv2d_0a_1x1/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4b/Branch_2/Conv2d_0c_3x3/Conv2D" out_port_id="0"/>
+		<IR id="151" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4b/Branch_2/Conv2d_0c_3x3/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageBoxPredictor/ClassPredictor/Conv2D" out_port_id="0"/>
+		<IR id="279" name="FirstStageBoxPredictor/ClassPredictor/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4b/Branch_1/Conv2d_0a_1x1/Conv2D" out_port_id="0"/>
+		<IR id="131" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4b/Branch_1/Conv2d_0a_1x1/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/MaxPool_2a_3x3/MaxPool" out_port_id="0"/>
+		<IR id="12" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/MaxPool_2a_3x3/MaxPool" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3b/Branch_2/Conv2d_0b_3x3/Conv2D" out_port_id="0"/>
+		<IR id="45" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3b/Branch_2/Conv2d_0b_3x3/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3b/Branch_2/Conv2d_0c_3x3/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="52" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3b/Branch_2/Conv2d_0c_3x3/BatchNorm/FusedBatchNorm/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4e/Branch_1/Conv2d_0b_3x3/Relu" out_port_id="0"/>
+		<IR id="250" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4e/Branch_1/Conv2d_0b_3x3/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/Mixed_3b/Branch_1/Conv2d_0b_3x3/weights/read/_78__cf__84" out_port_id="0"/>
+		<IR id="34" name="FirstStageFeatureExtractor/InceptionV2/Mixed_3b/Branch_1/Conv2d_0b_3x3/weights/read/_78__cf__84/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/Mixed_4b/Branch_2/Conv2d_0a_1x1/weights/read/_158__cf__164" out_port_id="0"/>
+		<IR id="140" name="FirstStageFeatureExtractor/InceptionV2/Mixed_4b/Branch_2/Conv2d_0a_1x1/weights/read/_158__cf__164/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/Mixed_4e/Branch_2/Conv2d_0c_3x3/weights/read/_238__cf__244" out_port_id="0"/>
+		<IR id="261" name="FirstStageFeatureExtractor/InceptionV2/Mixed_4e/Branch_2/Conv2d_0c_3x3/weights/read/_238__cf__244/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5b/Branch_2/Conv2d_0c_3x3/Conv2D" out_port_id="0"/>
+		<IR id="358" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5b/Branch_2/Conv2d_0c_3x3/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4c/Branch_3/AvgPool_0a_3x3/AvgPool" out_port_id="0"/>
+		<IR id="192" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4c/Branch_3/AvgPool_0a_3x3/AvgPool" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5a/Branch_1/Conv2d_0b_3x3/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="323" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5a/Branch_1/Conv2d_0b_3x3/BatchNorm/FusedBatchNorm/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5c/Branch_1/Conv2d_0b_3x3/Relu" out_port_id="0"/>
+		<IR id="383" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5c/Branch_1/Conv2d_0b_3x3/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/Mixed_3c/Branch_1/Conv2d_0a_1x1/weights/read/_113__cf__119" out_port_id="0"/>
+		<IR id="66" name="FirstStageFeatureExtractor/InceptionV2/Mixed_3c/Branch_1/Conv2d_0a_1x1/weights/read/_113__cf__119/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4b/Branch_1/Conv2d_0b_3x3/Conv2D" out_port_id="0"/>
+		<IR id="136" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4b/Branch_1/Conv2d_0b_3x3/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4d/Branch_2/Conv2d_0b_3x3/Relu" out_port_id="0"/>
+		<IR id="223" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4d/Branch_2/Conv2d_0b_3x3/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4b/Branch_2/Conv2d_0a_1x1/Relu" out_port_id="0"/>
+		<IR id="144" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4b/Branch_2/Conv2d_0a_1x1/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4b/Branch_3/AvgPool_0a_3x3/AvgPool" out_port_id="0"/>
+		<IR id="155" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4b/Branch_3/AvgPool_0a_3x3/AvgPool" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4e/Branch_1/Conv2d_0a_1x1/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="244" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4e/Branch_1/Conv2d_0a_1x1/BatchNorm/FusedBatchNorm/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3b/Branch_2/Conv2d_0b_3x3/Relu" out_port_id="0"/>
+		<IR id="48" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3b/Branch_2/Conv2d_0b_3x3/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4c/Branch_2/Conv2d_0a_1x1/Relu" out_port_id="0"/>
+		<IR id="181" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4c/Branch_2/Conv2d_0a_1x1/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/Mixed_3c/Branch_2/Conv2d_0c_3x3/weights/read/_93__cf__99" out_port_id="0"/>
+		<IR id="86" name="FirstStageFeatureExtractor/InceptionV2/Mixed_3c/Branch_2/Conv2d_0c_3x3/weights/read/_93__cf__99/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5a/Branch_1/Conv2d_0b_3x3/Relu" out_port_id="0"/>
+		<IR id="324" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5a/Branch_1/Conv2d_0b_3x3/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4c/Branch_2/Conv2d_0b_3x3/Relu" out_port_id="0"/>
+		<IR id="186" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4c/Branch_2/Conv2d_0b_3x3/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4c/Branch_2/Conv2d_0b_3x3/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="185" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4c/Branch_2/Conv2d_0b_3x3/BatchNorm/FusedBatchNorm/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3b/Branch_1/Conv2d_0b_3x3/Relu" out_port_id="0"/>
+		<IR id="38" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3b/Branch_1/Conv2d_0b_3x3/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3b/Branch_3/AvgPool_0a_3x3/AvgPool" out_port_id="0"/>
+		<IR id="54" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3b/Branch_3/AvgPool_0a_3x3/AvgPool" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="SecondStageBoxPredictor/Reshape_1" out_port_id="0"/>
+		<IR id="434" name="SecondStageBoxPredictor/Reshape_1" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3c/Branch_2/Conv2d_0c_3x3/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="89" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3c/Branch_2/Conv2d_0c_3x3/BatchNorm/FusedBatchNorm/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/Mixed_4e/Branch_3/Conv2d_0b_1x1/weights/read/_17__cf__23" out_port_id="0"/>
+		<IR id="267" name="FirstStageFeatureExtractor/InceptionV2/Mixed_4e/Branch_3/Conv2d_0b_1x1/weights/read/_17__cf__23/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5c/Branch_2/Conv2d_0a_1x1/weights/read/_360__cf__366" out_port_id="0"/>
+		<IR id="384" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5c/Branch_2/Conv2d_0a_1x1/weights/read/_360__cf__366/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5c/Branch_2/Conv2d_0a_1x1/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="387" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5c/Branch_2/Conv2d_0a_1x1/BatchNorm/FusedBatchNorm/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4b/concat" out_port_id="0"/>
+		<IR id="161" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4b/concat" out_port_id="4"/>
+	</map>
+	<map>
+		<framework name="Conv/weights/read" out_port_id="0"/>
+		<IR id="273" name="Conv/weights/read/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3b/Branch_2/Conv2d_0a_1x1/Conv2D" out_port_id="0"/>
+		<IR id="40" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3b/Branch_2/Conv2d_0a_1x1/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="SecondStageBoxPredictor/ClassPredictor/MatMul" out_port_id="0"/>
+		<IR id="430" name="SecondStageBoxPredictor/ClassPredictor/MatMul" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3b/Branch_1/Conv2d_0a_1x1/Relu" out_port_id="0"/>
+		<IR id="33" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3b/Branch_1/Conv2d_0a_1x1/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5b/Branch_3/Conv2d_0b_1x1/Relu" out_port_id="0"/>
+		<IR id="367" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5b/Branch_3/Conv2d_0b_1x1/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/Mixed_4c/Branch_2/Conv2d_0b_3x3/weights/read/_183__cf__189" out_port_id="0"/>
+		<IR id="182" name="FirstStageFeatureExtractor/InceptionV2/Mixed_4c/Branch_2/Conv2d_0b_3x3/weights/read/_183__cf__189/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3c/Branch_2/Conv2d_0a_1x1/Conv2D" out_port_id="0"/>
+		<IR id="77" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3c/Branch_2/Conv2d_0a_1x1/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4e/Branch_2/Conv2d_0a_1x1/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="254" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4e/Branch_2/Conv2d_0a_1x1/BatchNorm/FusedBatchNorm/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4b/Branch_3/Conv2d_0b_1x1/Relu" out_port_id="0"/>
+		<IR id="160" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4b/Branch_3/Conv2d_0b_1x1/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5a/Branch_0/Conv2d_1a_3x3/weights/read/_310__cf__316" out_port_id="0"/>
+		<IR id="310" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5a/Branch_0/Conv2d_1a_3x3/weights/read/_310__cf__316/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3b/Branch_3/Conv2d_0b_1x1/Conv2D" out_port_id="0"/>
+		<IR id="56" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3b/Branch_3/Conv2d_0b_1x1/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Conv2d_2c_3x3/Relu" out_port_id="0"/>
+		<IR id="22" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Conv2d_2c_3x3/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4b/Branch_2/Conv2d_0a_1x1/Conv2D" out_port_id="0"/>
+		<IR id="141" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4b/Branch_2/Conv2d_0a_1x1/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4c/Branch_1/Conv2d_0b_3x3/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="175" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4c/Branch_1/Conv2d_0b_3x3/BatchNorm/FusedBatchNorm/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4b/Branch_0/Conv2d_0a_1x1/Conv2D" out_port_id="0"/>
+		<IR id="126" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4b/Branch_0/Conv2d_0a_1x1/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4b/Branch_2/Conv2d_0b_3x3/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="148" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4b/Branch_2/Conv2d_0b_3x3/BatchNorm/FusedBatchNorm/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Conv2d_2b_1x1/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="16" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Conv2d_2b_1x1/BatchNorm/FusedBatchNorm/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3b/Branch_2/Conv2d_0c_3x3/Conv2D" out_port_id="0"/>
+		<IR id="50" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3b/Branch_2/Conv2d_0c_3x3/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4b/Branch_2/Conv2d_0c_3x3/Relu" out_port_id="0"/>
+		<IR id="154" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4b/Branch_2/Conv2d_0c_3x3/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3b/Branch_1/Conv2d_0b_3x3/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="37" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3b/Branch_1/Conv2d_0b_3x3/BatchNorm/FusedBatchNorm/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4a/Branch_1/Conv2d_0a_1x1/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="111" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4a/Branch_1/Conv2d_0a_1x1/BatchNorm/FusedBatchNorm/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/Mixed_4e/Branch_2/Conv2d_0a_1x1/weights/read/_248__cf__254" out_port_id="0"/>
+		<IR id="251" name="FirstStageFeatureExtractor/InceptionV2/Mixed_4e/Branch_2/Conv2d_0a_1x1/weights/read/_248__cf__254/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4c/concat" out_port_id="0"/>
+		<IR id="198" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4c/concat" out_port_id="4"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4b/Branch_2/Conv2d_0c_3x3/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="153" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4b/Branch_2/Conv2d_0c_3x3/BatchNorm/FusedBatchNorm/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4e/Branch_2/Conv2d_0c_3x3/Relu" out_port_id="0"/>
+		<IR id="265" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4e/Branch_2/Conv2d_0c_3x3/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/Mixed_4c/Branch_1/Conv2d_0a_1x1/weights/read/_198__cf__204" out_port_id="0"/>
+		<IR id="167" name="FirstStageFeatureExtractor/InceptionV2/Mixed_4c/Branch_1/Conv2d_0a_1x1/weights/read/_198__cf__204/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4b/Branch_0/Conv2d_0a_1x1/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="128" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4b/Branch_0/Conv2d_0a_1x1/BatchNorm/FusedBatchNorm/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5c/Branch_3/Conv2d_0b_1x1/Conv2D" out_port_id="0"/>
+		<IR id="401" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5c/Branch_3/Conv2d_0b_1x1/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4d/Branch_0/Conv2d_0a_1x1/Relu" out_port_id="0"/>
+		<IR id="203" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4d/Branch_0/Conv2d_0a_1x1/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/Mixed_3b/Branch_2/Conv2d_0a_1x1/weights/read/_73__cf__79" out_port_id="0"/>
+		<IR id="39" name="FirstStageFeatureExtractor/InceptionV2/Mixed_3b/Branch_2/Conv2d_0a_1x1/weights/read/_73__cf__79/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4a/Branch_1/Conv2d_0a_1x1/Relu" out_port_id="0"/>
+		<IR id="112" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4a/Branch_1/Conv2d_0a_1x1/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/Mixed_4d/Branch_0/Conv2d_0a_1x1/weights/read/_233__cf__239" out_port_id="0"/>
+		<IR id="199" name="FirstStageFeatureExtractor/InceptionV2/Mixed_4d/Branch_0/Conv2d_0a_1x1/weights/read/_233__cf__239/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5c/Branch_3/MaxPool_0a_3x3/MaxPool" out_port_id="0"/>
+		<IR id="399" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5c/Branch_3/MaxPool_0a_3x3/MaxPool" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4c/Branch_1/Conv2d_0a_1x1/Relu" out_port_id="0"/>
+		<IR id="171" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4c/Branch_1/Conv2d_0a_1x1/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/Mixed_4b/Branch_0/Conv2d_0a_1x1/weights/read/_173__cf__179" out_port_id="0"/>
+		<IR id="125" name="FirstStageFeatureExtractor/InceptionV2/Mixed_4b/Branch_0/Conv2d_0a_1x1/weights/read/_173__cf__179/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4e/Branch_2/Conv2d_0c_3x3/Conv2D" out_port_id="0"/>
+		<IR id="262" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4e/Branch_2/Conv2d_0c_3x3/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5b/Branch_3/AvgPool_0a_3x3/AvgPool" out_port_id="0"/>
+		<IR id="362" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5b/Branch_3/AvgPool_0a_3x3/AvgPool" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5a/Branch_1/Conv2d_0a_1x1/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="318" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5a/Branch_1/Conv2d_0a_1x1/BatchNorm/FusedBatchNorm/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4c/Branch_2/Conv2d_0c_3x3/Relu" out_port_id="0"/>
+		<IR id="191" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4c/Branch_2/Conv2d_0c_3x3/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/Mixed_3c/Branch_0/Conv2d_0a_1x1/weights/read/_118__cf__124" out_port_id="0"/>
+		<IR id="61" name="FirstStageFeatureExtractor/InceptionV2/Mixed_3c/Branch_0/Conv2d_0a_1x1/weights/read/_118__cf__124/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5a/Branch_1/Conv2d_1a_3x3/Conv2D" out_port_id="0"/>
+		<IR id="326" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5a/Branch_1/Conv2d_1a_3x3/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4b/Branch_1/Conv2d_0b_3x3/Relu" out_port_id="0"/>
+		<IR id="139" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4b/Branch_1/Conv2d_0b_3x3/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/Mixed_4d/Branch_2/Conv2d_0a_1x1/weights/read/_218__cf__224" out_port_id="0"/>
+		<IR id="214" name="FirstStageFeatureExtractor/InceptionV2/Mixed_4d/Branch_2/Conv2d_0a_1x1/weights/read/_218__cf__224/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/Mixed_4c/Branch_3/Conv2d_0b_1x1/weights/read/_27__cf__33" out_port_id="0"/>
+		<IR id="193" name="FirstStageFeatureExtractor/InceptionV2/Mixed_4c/Branch_3/Conv2d_0b_1x1/weights/read/_27__cf__33/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5b/Branch_2/Conv2d_0a_1x1/Relu" out_port_id="0"/>
+		<IR id="351" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5b/Branch_2/Conv2d_0a_1x1/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/Mixed_4d/Branch_2/Conv2d_0b_3x3/weights/read/_213__cf__219" out_port_id="0"/>
+		<IR id="219" name="FirstStageFeatureExtractor/InceptionV2/Mixed_4d/Branch_2/Conv2d_0b_3x3/weights/read/_213__cf__219/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4a/Branch_1/Conv2d_0b_3x3/Relu" out_port_id="0"/>
+		<IR id="117" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4a/Branch_1/Conv2d_0b_3x3/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5c/Branch_0/Conv2d_0a_1x1/Relu" out_port_id="0"/>
+		<IR id="373" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5c/Branch_0/Conv2d_0a_1x1/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4b/Branch_3/Conv2d_0b_1x1/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="159" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4b/Branch_3/Conv2d_0b_1x1/BatchNorm/FusedBatchNorm/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="SecondStageBoxPredictor/BoxEncodingPredictor/MatMul" out_port_id="0"/>
+		<IR id="413" name="SecondStageBoxPredictor/BoxEncodingPredictor/MatMul" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/Mixed_3b/Branch_0/Conv2d_0a_1x1/weights/read/_88__cf__94" out_port_id="0"/>
+		<IR id="24" name="FirstStageFeatureExtractor/InceptionV2/Mixed_3b/Branch_0/Conv2d_0a_1x1/weights/read/_88__cf__94/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/MaxPool_3a_3x3/MaxPool" out_port_id="0"/>
+		<IR id="23" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/MaxPool_3a_3x3/MaxPool" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4d/Branch_2/Conv2d_0a_1x1/Conv2D" out_port_id="0"/>
+		<IR id="215" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4d/Branch_2/Conv2d_0a_1x1/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4d/Branch_2/Conv2d_0c_3x3/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="227" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4d/Branch_2/Conv2d_0c_3x3/BatchNorm/FusedBatchNorm/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/Mixed_4b/Branch_3/Conv2d_0b_1x1/weights/read/_32__cf__38" out_port_id="0"/>
+		<IR id="156" name="FirstStageFeatureExtractor/InceptionV2/Mixed_4b/Branch_3/Conv2d_0b_1x1/weights/read/_32__cf__38/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4a/Branch_0/Conv2d_0a_1x1/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="101" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4a/Branch_0/Conv2d_0a_1x1/BatchNorm/FusedBatchNorm/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3c/Branch_0/Conv2d_0a_1x1/Relu" out_port_id="0"/>
+		<IR id="65" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3c/Branch_0/Conv2d_0a_1x1/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Conv2d_1a_7x7/separable_conv2d" out_port_id="0"/>
+		<IR id="8" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Conv2d_1a_7x7/separable_conv2d" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="SecondStageBoxPredictor/AvgPool" out_port_id="0"/>
+		<IR id="409" name="SecondStageBoxPredictor/AvgPool/Transpose" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/Mixed_3c/Branch_1/Conv2d_0b_3x3/weights/read/_108__cf__114" out_port_id="0"/>
+		<IR id="71" name="FirstStageFeatureExtractor/InceptionV2/Mixed_3c/Branch_1/Conv2d_0b_3x3/weights/read/_108__cf__114/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4d/Branch_0/Conv2d_0a_1x1/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="202" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4d/Branch_0/Conv2d_0a_1x1/BatchNorm/FusedBatchNorm/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4c/Branch_1/Conv2d_0b_3x3/Conv2D" out_port_id="0"/>
+		<IR id="173" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4c/Branch_1/Conv2d_0b_3x3/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3c/Branch_3/Conv2d_0b_1x1/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="95" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3c/Branch_3/Conv2d_0b_1x1/BatchNorm/FusedBatchNorm/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/Conv2d_2b_1x1/weights/read/_52__cf__58" out_port_id="0"/>
+		<IR id="13" name="FirstStageFeatureExtractor/InceptionV2/Conv2d_2b_1x1/weights/read/_52__cf__58/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3b/Branch_0/Conv2d_0a_1x1/Relu" out_port_id="0"/>
+		<IR id="28" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3b/Branch_0/Conv2d_0a_1x1/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4d/Branch_3/AvgPool_0a_3x3/AvgPool" out_port_id="0"/>
+		<IR id="229" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4d/Branch_3/AvgPool_0a_3x3/AvgPool" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/Conv2d_1a_7x7/depthwise_weights/read/_58__cf__64" out_port_id="0"/>
+		<IR id="5" name="2560225605_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5a/Branch_0/Conv2d_0a_1x1/Conv2D" out_port_id="0"/>
+		<IR id="306" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5a/Branch_0/Conv2d_0a_1x1/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5b/Branch_0/Conv2d_0a_1x1/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="335" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5b/Branch_0/Conv2d_0a_1x1/BatchNorm/FusedBatchNorm/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5b/Branch_1/Conv2d_0b_3x3/Relu" out_port_id="0"/>
+		<IR id="346" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5b/Branch_1/Conv2d_0b_3x3/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5b/Branch_1/Conv2d_0b_3x3/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="345" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5b/Branch_1/Conv2d_0b_3x3/BatchNorm/FusedBatchNorm/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/Mixed_4d/Branch_2/Conv2d_0c_3x3/weights/read/_208__cf__214" out_port_id="0"/>
+		<IR id="224" name="FirstStageFeatureExtractor/InceptionV2/Mixed_4d/Branch_2/Conv2d_0c_3x3/weights/read/_208__cf__214/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3b/Branch_2/Conv2d_0c_3x3/Relu" out_port_id="0"/>
+		<IR id="53" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3b/Branch_2/Conv2d_0c_3x3/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5a/Branch_1/Conv2d_1a_3x3/weights/read/_295__cf__301" out_port_id="0"/>
+		<IR id="325" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5a/Branch_1/Conv2d_1a_3x3/weights/read/_295__cf__301/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/Mixed_3b/Branch_2/Conv2d_0b_3x3/weights/read/_68__cf__74" out_port_id="0"/>
+		<IR id="44" name="FirstStageFeatureExtractor/InceptionV2/Mixed_3b/Branch_2/Conv2d_0b_3x3/weights/read/_68__cf__74/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4d/Branch_1/Conv2d_0a_1x1/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="207" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4d/Branch_1/Conv2d_0a_1x1/BatchNorm/FusedBatchNorm/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/Mixed_3b/Branch_1/Conv2d_0a_1x1/weights/read/_83__cf__89" out_port_id="0"/>
+		<IR id="29" name="FirstStageFeatureExtractor/InceptionV2/Mixed_3b/Branch_1/Conv2d_0a_1x1/weights/read/_83__cf__89/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5c/Branch_1/Conv2d_0a_1x1/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="377" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5c/Branch_1/Conv2d_0a_1x1/BatchNorm/FusedBatchNorm/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5c/Branch_3/Conv2d_0b_1x1/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="403" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5c/Branch_3/Conv2d_0b_1x1/BatchNorm/FusedBatchNorm/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4c/Branch_3/Conv2d_0b_1x1/Relu" out_port_id="0"/>
+		<IR id="197" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4c/Branch_3/Conv2d_0b_1x1/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/Mixed_4a/Branch_1/Conv2d_1a_3x3/weights/read/_123__cf__129" out_port_id="0"/>
+		<IR id="118" name="FirstStageFeatureExtractor/InceptionV2/Mixed_4a/Branch_1/Conv2d_1a_3x3/weights/read/_123__cf__129/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageBoxPredictor/BoxEncodingPredictor/weights/read/_265__cf__271" out_port_id="0"/>
+		<IR id="289" name="FirstStageBoxPredictor/BoxEncodingPredictor/weights/read/_265__cf__271/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3c/Branch_1/Conv2d_0b_3x3/Relu" out_port_id="0"/>
+		<IR id="75" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3c/Branch_1/Conv2d_0b_3x3/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5a/Branch_1/Conv2d_0b_3x3/weights/read/_300__cf__306" out_port_id="0"/>
+		<IR id="320" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5a/Branch_1/Conv2d_0b_3x3/weights/read/_300__cf__306/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4e/Branch_1/Conv2d_0a_1x1/Conv2D" out_port_id="0"/>
+		<IR id="242" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4e/Branch_1/Conv2d_0a_1x1/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4d/Branch_3/Conv2d_0b_1x1/Relu" out_port_id="0"/>
+		<IR id="234" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4d/Branch_3/Conv2d_0b_1x1/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/Mixed_4b/Branch_1/Conv2d_0a_1x1/weights/read/_168__cf__174" out_port_id="0"/>
+		<IR id="130" name="FirstStageFeatureExtractor/InceptionV2/Mixed_4b/Branch_1/Conv2d_0a_1x1/weights/read/_168__cf__174/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5c/Branch_1/Conv2d_0b_3x3/weights/read/_365__cf__371" out_port_id="0"/>
+		<IR id="379" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5c/Branch_1/Conv2d_0b_3x3/weights/read/_365__cf__371/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3b/Branch_1/Conv2d_0a_1x1/Conv2D" out_port_id="0"/>
+		<IR id="30" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3b/Branch_1/Conv2d_0a_1x1/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3c/Branch_1/Conv2d_0a_1x1/Conv2D" out_port_id="0"/>
+		<IR id="67" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3c/Branch_1/Conv2d_0a_1x1/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4d/Branch_2/Conv2d_0b_3x3/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="222" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4d/Branch_2/Conv2d_0b_3x3/BatchNorm/FusedBatchNorm/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3b/Branch_0/Conv2d_0a_1x1/Conv2D" out_port_id="0"/>
+		<IR id="25" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3b/Branch_0/Conv2d_0a_1x1/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5a/Branch_0/Conv2d_0a_1x1/Relu" out_port_id="0"/>
+		<IR id="309" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5a/Branch_0/Conv2d_0a_1x1/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5a/Branch_1/Conv2d_0b_3x3/Conv2D" out_port_id="0"/>
+		<IR id="321" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5a/Branch_1/Conv2d_0b_3x3/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/Mixed_4e/Branch_0/Conv2d_0a_1x1/weights/read/_263__cf__269" out_port_id="0"/>
+		<IR id="236" name="FirstStageFeatureExtractor/InceptionV2/Mixed_4e/Branch_0/Conv2d_0a_1x1/weights/read/_263__cf__269/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5a/concat" out_port_id="0"/>
+		<IR id="331" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5a/concat" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4a/Branch_2/MaxPool_1a_3x3/MaxPool" out_port_id="0"/>
+		<IR id="123" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4a/Branch_2/MaxPool_1a_3x3/MaxPool" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3c/Branch_0/Conv2d_0a_1x1/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="64" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3c/Branch_0/Conv2d_0a_1x1/BatchNorm/FusedBatchNorm/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3c/Branch_1/Conv2d_0a_1x1/Relu" out_port_id="0"/>
+		<IR id="70" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3c/Branch_1/Conv2d_0a_1x1/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/Mixed_4b/Branch_1/Conv2d_0b_3x3/weights/read/_163__cf__169" out_port_id="0"/>
+		<IR id="135" name="FirstStageFeatureExtractor/InceptionV2/Mixed_4b/Branch_1/Conv2d_0b_3x3/weights/read/_163__cf__169/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4b/Branch_1/Conv2d_0a_1x1/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="133" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4b/Branch_1/Conv2d_0a_1x1/BatchNorm/FusedBatchNorm/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4b/Branch_1/Conv2d_0b_3x3/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="138" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4b/Branch_1/Conv2d_0b_3x3/BatchNorm/FusedBatchNorm/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3c/Branch_1/Conv2d_0b_3x3/Conv2D" out_port_id="0"/>
+		<IR id="72" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3c/Branch_1/Conv2d_0b_3x3/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/Mixed_4c/Branch_0/Conv2d_0a_1x1/weights/read/_203__cf__209" out_port_id="0"/>
+		<IR id="162" name="FirstStageFeatureExtractor/InceptionV2/Mixed_4c/Branch_0/Conv2d_0a_1x1/weights/read/_203__cf__209/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/Mixed_4e/Branch_2/Conv2d_0b_3x3/weights/read/_243__cf__249" out_port_id="0"/>
+		<IR id="256" name="FirstStageFeatureExtractor/InceptionV2/Mixed_4e/Branch_2/Conv2d_0b_3x3/weights/read/_243__cf__249/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5c/Branch_2/Conv2d_0a_1x1/Relu" out_port_id="0"/>
+		<IR id="388" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5c/Branch_2/Conv2d_0a_1x1/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Conv2d_1a_7x7/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="10" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Conv2d_1a_7x7/BatchNorm/FusedBatchNorm/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Conv2d_2b_1x1/Relu" out_port_id="0"/>
+		<IR id="17" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Conv2d_2b_1x1/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4c/Branch_1/Conv2d_0a_1x1/Conv2D" out_port_id="0"/>
+		<IR id="168" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4c/Branch_1/Conv2d_0a_1x1/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4c/Branch_2/Conv2d_0b_3x3/Conv2D" out_port_id="0"/>
+		<IR id="183" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4c/Branch_2/Conv2d_0b_3x3/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4b/Branch_2/Conv2d_0b_3x3/Relu" out_port_id="0"/>
+		<IR id="149" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4b/Branch_2/Conv2d_0b_3x3/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4e/Branch_3/Conv2d_0b_1x1/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="270" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4e/Branch_3/Conv2d_0b_1x1/BatchNorm/FusedBatchNorm/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5b/Branch_2/Conv2d_0b_3x3/Conv2D" out_port_id="0"/>
+		<IR id="353" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5b/Branch_2/Conv2d_0b_3x3/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/Mixed_4a/Branch_1/Conv2d_0a_1x1/weights/read/_133__cf__139" out_port_id="0"/>
+		<IR id="108" name="FirstStageFeatureExtractor/InceptionV2/Mixed_4a/Branch_1/Conv2d_0a_1x1/weights/read/_133__cf__139/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4d/Branch_3/Conv2d_0b_1x1/Conv2D" out_port_id="0"/>
+		<IR id="231" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4d/Branch_3/Conv2d_0b_1x1/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5b/Branch_2/Conv2d_0a_1x1/Conv2D" out_port_id="0"/>
+		<IR id="348" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5b/Branch_2/Conv2d_0a_1x1/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5c/Branch_2/Conv2d_0b_3x3/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="392" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5c/Branch_2/Conv2d_0b_3x3/BatchNorm/FusedBatchNorm/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4c/Branch_0/Conv2d_0a_1x1/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="165" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4c/Branch_0/Conv2d_0a_1x1/BatchNorm/FusedBatchNorm/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5b/Branch_2/Conv2d_0a_1x1/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="350" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5b/Branch_2/Conv2d_0a_1x1/BatchNorm/FusedBatchNorm/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4a/Branch_0/Conv2d_1a_3x3/Conv2D" out_port_id="0"/>
+		<IR id="104" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4a/Branch_0/Conv2d_1a_3x3/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3b/Branch_3/Conv2d_0b_1x1/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="58" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3b/Branch_3/Conv2d_0b_1x1/BatchNorm/FusedBatchNorm/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5b/Branch_1/Conv2d_0a_1x1/Conv2D" out_port_id="0"/>
+		<IR id="338" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5b/Branch_1/Conv2d_0a_1x1/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4c/Branch_0/Conv2d_0a_1x1/Relu" out_port_id="0"/>
+		<IR id="166" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4c/Branch_0/Conv2d_0a_1x1/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5b/Branch_2/Conv2d_0c_3x3/weights/read/_320__cf__326" out_port_id="0"/>
+		<IR id="357" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5b/Branch_2/Conv2d_0c_3x3/weights/read/_320__cf__326/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4e/Branch_3/Conv2d_0b_1x1/Conv2D" out_port_id="0"/>
+		<IR id="268" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4e/Branch_3/Conv2d_0b_1x1/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4e/Branch_3/Conv2d_0b_1x1/Relu" out_port_id="0"/>
+		<IR id="271" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4e/Branch_3/Conv2d_0b_1x1/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/Mixed_4c/Branch_2/Conv2d_0c_3x3/weights/read/_178__cf__184" out_port_id="0"/>
+		<IR id="187" name="FirstStageFeatureExtractor/InceptionV2/Mixed_4c/Branch_2/Conv2d_0c_3x3/weights/read/_178__cf__184/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5b/Branch_0/Conv2d_0a_1x1/Conv2D" out_port_id="0"/>
+		<IR id="333" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5b/Branch_0/Conv2d_0a_1x1/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3c/Branch_1/Conv2d_0a_1x1/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="69" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3c/Branch_1/Conv2d_0a_1x1/BatchNorm/FusedBatchNorm/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5b/Branch_0/Conv2d_0a_1x1/weights/read/_345__cf__351" out_port_id="0"/>
+		<IR id="332" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5b/Branch_0/Conv2d_0a_1x1/weights/read/_345__cf__351/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4e/Branch_0/Conv2d_0a_1x1/Conv2D" out_port_id="0"/>
+		<IR id="237" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4e/Branch_0/Conv2d_0a_1x1/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Conv2d_1a_7x7/separable_conv2d/depthwise" out_port_id="0"/>
+		<IR id="6" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Conv2d_1a_7x7/separable_conv2d/depthwise" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4a/Branch_0/Conv2d_1a_3x3/Relu" out_port_id="0"/>
+		<IR id="107" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4a/Branch_0/Conv2d_1a_3x3/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="SecondStageBoxPredictor/ClassPredictor/BiasAdd" out_port_id="0"/>
+		<IR id="432" name="SecondStageBoxPredictor/ClassPredictor/BiasAdd/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5c/Branch_1/Conv2d_0a_1x1/Conv2D" out_port_id="0"/>
+		<IR id="375" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5c/Branch_1/Conv2d_0a_1x1/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3c/concat" out_port_id="0"/>
+		<IR id="97" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3c/concat" out_port_id="4"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5c/Branch_3/Conv2d_0b_1x1/Relu" out_port_id="0"/>
+		<IR id="404" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5c/Branch_3/Conv2d_0b_1x1/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5c/Branch_0/Conv2d_0a_1x1/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="372" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5c/Branch_0/Conv2d_0a_1x1/BatchNorm/FusedBatchNorm/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5a/Branch_0/Conv2d_1a_3x3/Conv2D" out_port_id="0"/>
+		<IR id="311" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5a/Branch_0/Conv2d_1a_3x3/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4b/Branch_3/Conv2d_0b_1x1/Conv2D" out_port_id="0"/>
+		<IR id="157" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4b/Branch_3/Conv2d_0b_1x1/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4e/Branch_0/Conv2d_0a_1x1/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="239" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4e/Branch_0/Conv2d_0a_1x1/BatchNorm/FusedBatchNorm/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4e/Branch_1/Conv2d_0b_3x3/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="249" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4e/Branch_1/Conv2d_0b_3x3/BatchNorm/FusedBatchNorm/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5c/Branch_0/Conv2d_0a_1x1/weights/read/_375__cf__381" out_port_id="0"/>
+		<IR id="369" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5c/Branch_0/Conv2d_0a_1x1/weights/read/_375__cf__381/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/Mixed_4b/Branch_2/Conv2d_0c_3x3/weights/read/_148__cf__154" out_port_id="0"/>
+		<IR id="150" name="FirstStageFeatureExtractor/InceptionV2/Mixed_4b/Branch_2/Conv2d_0c_3x3/weights/read/_148__cf__154/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4e/Branch_1/Conv2d_0b_3x3/Conv2D" out_port_id="0"/>
+		<IR id="247" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4e/Branch_1/Conv2d_0b_3x3/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5c/Branch_2/Conv2d_0b_3x3/Relu" out_port_id="0"/>
+		<IR id="393" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5c/Branch_2/Conv2d_0b_3x3/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4c/Branch_0/Conv2d_0a_1x1/Conv2D" out_port_id="0"/>
+		<IR id="163" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4c/Branch_0/Conv2d_0a_1x1/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5b/Branch_1/Conv2d_0a_1x1/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="340" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5b/Branch_1/Conv2d_0a_1x1/BatchNorm/FusedBatchNorm/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5a/Branch_1/Conv2d_1a_3x3/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="328" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5a/Branch_1/Conv2d_1a_3x3/BatchNorm/FusedBatchNorm/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3b/Branch_2/Conv2d_0a_1x1/Relu" out_port_id="0"/>
+		<IR id="43" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3b/Branch_2/Conv2d_0a_1x1/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4d/Branch_1/Conv2d_0a_1x1/Conv2D" out_port_id="0"/>
+		<IR id="205" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4d/Branch_1/Conv2d_0a_1x1/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3c/Branch_0/Conv2d_0a_1x1/Conv2D" out_port_id="0"/>
+		<IR id="62" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3c/Branch_0/Conv2d_0a_1x1/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3b/Branch_1/Conv2d_0b_3x3/Conv2D" out_port_id="0"/>
+		<IR id="35" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3b/Branch_1/Conv2d_0b_3x3/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/Mixed_4e/Branch_1/Conv2d_0b_3x3/weights/read/_253__cf__259" out_port_id="0"/>
+		<IR id="246" name="FirstStageFeatureExtractor/InceptionV2/Mixed_4e/Branch_1/Conv2d_0b_3x3/weights/read/_253__cf__259/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4c/Branch_1/Conv2d_0b_3x3/Relu" out_port_id="0"/>
+		<IR id="176" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4c/Branch_1/Conv2d_0b_3x3/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5b/Branch_3/Conv2d_0b_1x1/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="366" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5b/Branch_3/Conv2d_0b_1x1/BatchNorm/FusedBatchNorm/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3c/Branch_3/Conv2d_0b_1x1/Conv2D" out_port_id="0"/>
+		<IR id="93" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3c/Branch_3/Conv2d_0b_1x1/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5b/Branch_1/Conv2d_0b_3x3/Conv2D" out_port_id="0"/>
+		<IR id="343" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5b/Branch_1/Conv2d_0b_3x3/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4c/Branch_2/Conv2d_0a_1x1/Conv2D" out_port_id="0"/>
+		<IR id="178" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4c/Branch_2/Conv2d_0a_1x1/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="SecondStageBoxPredictor/Flatten/flatten/Reshape" out_port_id="0"/>
+		<IR id="411" name="SecondStageBoxPredictor/Flatten/flatten/Reshape" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5a/Branch_1/Conv2d_0a_1x1/Conv2D" out_port_id="0"/>
+		<IR id="316" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5a/Branch_1/Conv2d_0a_1x1/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4d/concat" out_port_id="0"/>
+		<IR id="235" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4d/concat" out_port_id="4"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/Mixed_4d/Branch_1/Conv2d_0a_1x1/weights/read/_228__cf__234" out_port_id="0"/>
+		<IR id="204" name="FirstStageFeatureExtractor/InceptionV2/Mixed_4d/Branch_1/Conv2d_0a_1x1/weights/read/_228__cf__234/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5c/Branch_2/Conv2d_0c_3x3/weights/read/_350__cf__356" out_port_id="0"/>
+		<IR id="394" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5c/Branch_2/Conv2d_0c_3x3/weights/read/_350__cf__356/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4d/Branch_2/Conv2d_0c_3x3/Relu" out_port_id="0"/>
+		<IR id="228" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4d/Branch_2/Conv2d_0c_3x3/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3b/Branch_0/Conv2d_0a_1x1/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="27" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3b/Branch_0/Conv2d_0a_1x1/BatchNorm/FusedBatchNorm/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/Mixed_4a/Branch_0/Conv2d_1a_3x3/weights/read/_138__cf__144" out_port_id="0"/>
+		<IR id="103" name="FirstStageFeatureExtractor/InceptionV2/Mixed_4a/Branch_0/Conv2d_1a_3x3/weights/read/_138__cf__144/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4c/Branch_3/Conv2d_0b_1x1/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="196" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4c/Branch_3/Conv2d_0b_1x1/BatchNorm/FusedBatchNorm/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5b/Branch_2/Conv2d_0b_3x3/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="355" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5b/Branch_2/Conv2d_0b_3x3/BatchNorm/FusedBatchNorm/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4e/Branch_2/Conv2d_0a_1x1/Relu" out_port_id="0"/>
+		<IR id="255" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4e/Branch_2/Conv2d_0a_1x1/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3c/Branch_2/Conv2d_0b_3x3/Relu" out_port_id="0"/>
+		<IR id="85" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3c/Branch_2/Conv2d_0b_3x3/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/Mixed_3b/Branch_3/Conv2d_0b_1x1/weights/read/_42__cf__48" out_port_id="0"/>
+		<IR id="55" name="FirstStageFeatureExtractor/InceptionV2/Mixed_3b/Branch_3/Conv2d_0b_1x1/weights/read/_42__cf__48/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3b/Branch_2/Conv2d_0a_1x1/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="42" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3b/Branch_2/Conv2d_0a_1x1/BatchNorm/FusedBatchNorm/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4c/Branch_2/Conv2d_0a_1x1/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="180" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4c/Branch_2/Conv2d_0a_1x1/BatchNorm/FusedBatchNorm/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4d/Branch_1/Conv2d_0b_3x3/Conv2D" out_port_id="0"/>
+		<IR id="210" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4d/Branch_1/Conv2d_0b_3x3/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4d/Branch_3/Conv2d_0b_1x1/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="233" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4d/Branch_3/Conv2d_0b_1x1/BatchNorm/FusedBatchNorm/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4e/Branch_2/Conv2d_0b_3x3/Relu" out_port_id="0"/>
+		<IR id="260" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4e/Branch_2/Conv2d_0b_3x3/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageBoxPredictor/BoxEncodingPredictor/Conv2D" out_port_id="0"/>
+		<IR id="290" name="FirstStageBoxPredictor/BoxEncodingPredictor/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3c/Branch_2/Conv2d_0c_3x3/Conv2D" out_port_id="0"/>
+		<IR id="87" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3c/Branch_2/Conv2d_0c_3x3/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5c/Branch_2/Conv2d_0b_3x3/weights/read/_355__cf__361" out_port_id="0"/>
+		<IR id="389" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5c/Branch_2/Conv2d_0b_3x3/weights/read/_355__cf__361/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="Conv/BiasAdd" out_port_id="0"/>
+		<IR id="276" name="Conv/BiasAdd/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4d/Branch_2/Conv2d_0b_3x3/Conv2D" out_port_id="0"/>
+		<IR id="220" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4d/Branch_2/Conv2d_0b_3x3/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/Mixed_4e/Branch_1/Conv2d_0a_1x1/weights/read/_258__cf__264" out_port_id="0"/>
+		<IR id="241" name="FirstStageFeatureExtractor/InceptionV2/Mixed_4e/Branch_1/Conv2d_0a_1x1/weights/read/_258__cf__264/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3c/Branch_2/Conv2d_0b_3x3/Conv2D" out_port_id="0"/>
+		<IR id="82" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3c/Branch_2/Conv2d_0b_3x3/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5b/Branch_0/Conv2d_0a_1x1/Relu" out_port_id="0"/>
+		<IR id="336" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5b/Branch_0/Conv2d_0a_1x1/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4a/Branch_1/Conv2d_1a_3x3/Relu" out_port_id="0"/>
+		<IR id="122" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4a/Branch_1/Conv2d_1a_3x3/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4b/Branch_0/Conv2d_0a_1x1/Relu" out_port_id="0"/>
+		<IR id="129" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4b/Branch_0/Conv2d_0a_1x1/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4e/Branch_2/Conv2d_0c_3x3/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="264" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4e/Branch_2/Conv2d_0c_3x3/BatchNorm/FusedBatchNorm/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4a/concat" out_port_id="0"/>
+		<IR id="124" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4a/concat" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5a/Branch_0/Conv2d_1a_3x3/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="313" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5a/Branch_0/Conv2d_1a_3x3/BatchNorm/FusedBatchNorm/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4e/concat" out_port_id="0"/>
+		<IR id="272" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4e/concat" out_port_id="4"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5a/Branch_0/Conv2d_0a_1x1/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="308" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5a/Branch_0/Conv2d_0a_1x1/BatchNorm/FusedBatchNorm/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageBoxPredictor/BoxEncodingPredictor/BiasAdd" out_port_id="0"/>
+		<IR id="292" name="FirstStageBoxPredictor/BoxEncodingPredictor/BiasAdd/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5c/Branch_2/Conv2d_0c_3x3/Conv2D" out_port_id="0"/>
+		<IR id="395" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5c/Branch_2/Conv2d_0c_3x3/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5a/Branch_0/Conv2d_0a_1x1/weights/read/_315__cf__321" out_port_id="0"/>
+		<IR id="305" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5a/Branch_0/Conv2d_0a_1x1/weights/read/_315__cf__321/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4c/Branch_3/Conv2d_0b_1x1/Conv2D" out_port_id="0"/>
+		<IR id="194" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4c/Branch_3/Conv2d_0b_1x1/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5b/Branch_2/Conv2d_0b_3x3/weights/read/_325__cf__331" out_port_id="0"/>
+		<IR id="352" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5b/Branch_2/Conv2d_0b_3x3/weights/read/_325__cf__331/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5b/Branch_1/Conv2d_0a_1x1/weights/read/_340__cf__346" out_port_id="0"/>
+		<IR id="337" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5b/Branch_1/Conv2d_0a_1x1/weights/read/_340__cf__346/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4c/Branch_1/Conv2d_0a_1x1/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="170" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4c/Branch_1/Conv2d_0a_1x1/BatchNorm/FusedBatchNorm/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5b/Branch_2/Conv2d_0a_1x1/weights/read/_330__cf__336" out_port_id="0"/>
+		<IR id="347" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5b/Branch_2/Conv2d_0a_1x1/weights/read/_330__cf__336/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3b/Branch_1/Conv2d_0a_1x1/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="32" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3b/Branch_1/Conv2d_0a_1x1/BatchNorm/FusedBatchNorm/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4d/Branch_1/Conv2d_0a_1x1/Relu" out_port_id="0"/>
+		<IR id="208" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4d/Branch_1/Conv2d_0a_1x1/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5c/Branch_1/Conv2d_0a_1x1/weights/read/_370__cf__376" out_port_id="0"/>
+		<IR id="374" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5c/Branch_1/Conv2d_0a_1x1/weights/read/_370__cf__376/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4e/Branch_3/AvgPool_0a_3x3/AvgPool" out_port_id="0"/>
+		<IR id="266" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4e/Branch_3/AvgPool_0a_3x3/AvgPool" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5b/Branch_1/Conv2d_0b_3x3/weights/read/_335__cf__341" out_port_id="0"/>
+		<IR id="342" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5b/Branch_1/Conv2d_0b_3x3/weights/read/_335__cf__341/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="SecondStageBoxPredictor/BoxEncodingPredictor/weights/read/_1__cf__7" out_port_id="0"/>
+		<IR id="412" name="SecondStageBoxPredictor/BoxEncodingPredictor/MatMul/1_port_transpose22599_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/Mixed_4b/Branch_2/Conv2d_0b_3x3/weights/read/_153__cf__159" out_port_id="0"/>
+		<IR id="145" name="FirstStageFeatureExtractor/InceptionV2/Mixed_4b/Branch_2/Conv2d_0b_3x3/weights/read/_153__cf__159/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5c/Branch_1/Conv2d_0b_3x3/Conv2D" out_port_id="0"/>
+		<IR id="380" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5c/Branch_1/Conv2d_0b_3x3/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="Conv/Conv2D" out_port_id="0"/>
+		<IR id="274" name="Conv/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4a/Branch_1/Conv2d_0a_1x1/Conv2D" out_port_id="0"/>
+		<IR id="109" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4a/Branch_1/Conv2d_0a_1x1/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="Preprocessor/mul" out_port_id="0"/>
+		<IR id="2" name="Preprocessor/mul" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5b/Branch_3/Conv2d_0b_1x1/weights/read/_11__cf__17" out_port_id="0"/>
+		<IR id="363" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5b/Branch_3/Conv2d_0b_1x1/weights/read/_11__cf__17/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4a/Branch_1/Conv2d_1a_3x3/Conv2D" out_port_id="0"/>
+		<IR id="119" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4a/Branch_1/Conv2d_1a_3x3/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5a/Branch_1/Conv2d_0a_1x1/weights/read/_305__cf__311" out_port_id="0"/>
+		<IR id="315" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5a/Branch_1/Conv2d_0a_1x1/weights/read/_305__cf__311/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/Mixed_3c/Branch_2/Conv2d_0a_1x1/weights/read/_103__cf__109" out_port_id="0"/>
+		<IR id="76" name="FirstStageFeatureExtractor/InceptionV2/Mixed_3c/Branch_2/Conv2d_0a_1x1/weights/read/_103__cf__109/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4e/Branch_1/Conv2d_0a_1x1/Relu" out_port_id="0"/>
+		<IR id="245" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4e/Branch_1/Conv2d_0a_1x1/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="CropAndResize" out_port_id="0"/>
+		<IR id="303" name="CropAndResize" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5c/Branch_2/Conv2d_0c_3x3/Relu" out_port_id="0"/>
+		<IR id="398" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5c/Branch_2/Conv2d_0c_3x3/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="SecondStageBoxPredictor/Reshape_1/shape" out_port_id="0"/>
+		<IR id="433" name="SecondStageBoxPredictor/Reshape_1/Cast_125973_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/Mixed_4c/Branch_2/Conv2d_0a_1x1/weights/read/_188__cf__194" out_port_id="0"/>
+		<IR id="177" name="FirstStageFeatureExtractor/InceptionV2/Mixed_4c/Branch_2/Conv2d_0a_1x1/weights/read/_188__cf__194/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5b/Branch_2/Conv2d_0c_3x3/Relu" out_port_id="0"/>
+		<IR id="361" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5b/Branch_2/Conv2d_0c_3x3/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5a/Branch_0/Conv2d_1a_3x3/Relu" out_port_id="0"/>
+		<IR id="314" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5a/Branch_0/Conv2d_1a_3x3/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3c/Branch_2/Conv2d_0b_3x3/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="84" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3c/Branch_2/Conv2d_0b_3x3/BatchNorm/FusedBatchNorm/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/Mixed_4d/Branch_1/Conv2d_0b_3x3/weights/read/_223__cf__229" out_port_id="0"/>
+		<IR id="209" name="FirstStageFeatureExtractor/InceptionV2/Mixed_4d/Branch_1/Conv2d_0b_3x3/weights/read/_223__cf__229/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5b/Branch_2/Conv2d_0b_3x3/Relu" out_port_id="0"/>
+		<IR id="356" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5b/Branch_2/Conv2d_0b_3x3/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5c/concat" out_port_id="0"/>
+		<IR id="405" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5c/concat" out_port_id="4"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Conv2d_2c_3x3/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="21" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Conv2d_2c_3x3/BatchNorm/FusedBatchNorm/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4e/Branch_2/Conv2d_0b_3x3/Conv2D" out_port_id="0"/>
+		<IR id="257" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4e/Branch_2/Conv2d_0b_3x3/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4a/Branch_0/Conv2d_0a_1x1/Relu" out_port_id="0"/>
+		<IR id="102" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4a/Branch_0/Conv2d_0a_1x1/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4e/Branch_0/Conv2d_0a_1x1/Relu" out_port_id="0"/>
+		<IR id="240" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4e/Branch_0/Conv2d_0a_1x1/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4c/Branch_2/Conv2d_0c_3x3/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="190" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4c/Branch_2/Conv2d_0c_3x3/BatchNorm/FusedBatchNorm/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="SecondStageBoxPredictor/BoxEncodingPredictor/BiasAdd" out_port_id="0"/>
+		<IR id="415" name="SecondStageBoxPredictor/BoxEncodingPredictor/BiasAdd/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4a/Branch_0/Conv2d_0a_1x1/Conv2D" out_port_id="0"/>
+		<IR id="99" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4a/Branch_0/Conv2d_0a_1x1/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4d/Branch_1/Conv2d_0b_3x3/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="212" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4d/Branch_1/Conv2d_0b_3x3/BatchNorm/FusedBatchNorm/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5b/concat" out_port_id="0"/>
+		<IR id="368" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5b/concat" out_port_id="4"/>
+	</map>
+	<map>
+		<framework name="Preprocessor/sub" out_port_id="0"/>
+		<IR id="4" name="Preprocessor/sub" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5c/Branch_2/Conv2d_0c_3x3/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="397" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5c/Branch_2/Conv2d_0c_3x3/BatchNorm/FusedBatchNorm/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5a/Branch_1/Conv2d_0a_1x1/Relu" out_port_id="0"/>
+		<IR id="319" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5a/Branch_1/Conv2d_0a_1x1/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Conv2d_1a_7x7/Relu" out_port_id="0"/>
+		<IR id="11" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Conv2d_1a_7x7/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="Conv/Relu6" out_port_id="0"/>
+		<IR id="277" name="Conv/Relu6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4a/Branch_1/Conv2d_0b_3x3/Conv2D" out_port_id="0"/>
+		<IR id="114" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4a/Branch_1/Conv2d_0b_3x3/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3c/Branch_2/Conv2d_0a_1x1/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="79" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3c/Branch_2/Conv2d_0a_1x1/BatchNorm/FusedBatchNorm/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5c/Branch_2/Conv2d_0b_3x3/Conv2D" out_port_id="0"/>
+		<IR id="390" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5c/Branch_2/Conv2d_0b_3x3/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/Mixed_4a/Branch_1/Conv2d_0b_3x3/weights/read/_128__cf__134" out_port_id="0"/>
+		<IR id="113" name="FirstStageFeatureExtractor/InceptionV2/Mixed_4a/Branch_1/Conv2d_0b_3x3/weights/read/_128__cf__134/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4e/Branch_2/Conv2d_0b_3x3/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="259" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4e/Branch_2/Conv2d_0b_3x3/BatchNorm/FusedBatchNorm/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="SecondStageBoxPredictor/ClassPredictor/weights/read/_380__cf__386" out_port_id="0"/>
+		<IR id="429" name="SecondStageBoxPredictor/ClassPredictor/MatMul/1_port_transpose22603_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4d/Branch_1/Conv2d_0b_3x3/Relu" out_port_id="0"/>
+		<IR id="213" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4d/Branch_1/Conv2d_0b_3x3/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4d/Branch_0/Conv2d_0a_1x1/Conv2D" out_port_id="0"/>
+		<IR id="200" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4d/Branch_0/Conv2d_0a_1x1/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4d/Branch_2/Conv2d_0c_3x3/Conv2D" out_port_id="0"/>
+		<IR id="225" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4d/Branch_2/Conv2d_0c_3x3/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/Mixed_4c/Branch_1/Conv2d_0b_3x3/weights/read/_193__cf__199" out_port_id="0"/>
+		<IR id="172" name="FirstStageFeatureExtractor/InceptionV2/Mixed_4c/Branch_1/Conv2d_0b_3x3/weights/read/_193__cf__199/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4b/Branch_2/Conv2d_0b_3x3/Conv2D" out_port_id="0"/>
+		<IR id="146" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4b/Branch_2/Conv2d_0b_3x3/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Conv2d_2c_3x3/Conv2D" out_port_id="0"/>
+		<IR id="19" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Conv2d_2c_3x3/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3b/Branch_2/Conv2d_0b_3x3/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="47" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3b/Branch_2/Conv2d_0b_3x3/BatchNorm/FusedBatchNorm/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5c/Branch_2/Conv2d_0a_1x1/Conv2D" out_port_id="0"/>
+		<IR id="385" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5c/Branch_2/Conv2d_0a_1x1/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4c/Branch_2/Conv2d_0c_3x3/Conv2D" out_port_id="0"/>
+		<IR id="188" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4c/Branch_2/Conv2d_0c_3x3/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5b/Branch_1/Conv2d_0a_1x1/Relu" out_port_id="0"/>
+		<IR id="341" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5b/Branch_1/Conv2d_0a_1x1/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3b/concat" out_port_id="0"/>
+		<IR id="60" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3b/concat" out_port_id="4"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5c/Branch_1/Conv2d_0b_3x3/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="382" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5c/Branch_1/Conv2d_0b_3x3/BatchNorm/FusedBatchNorm/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Conv2d_2b_1x1/Conv2D" out_port_id="0"/>
+		<IR id="14" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Conv2d_2b_1x1/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3c/Branch_2/Conv2d_0a_1x1/Relu" out_port_id="0"/>
+		<IR id="80" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3c/Branch_2/Conv2d_0a_1x1/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3c/Branch_3/AvgPool_0a_3x3/AvgPool" out_port_id="0"/>
+		<IR id="91" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3c/Branch_3/AvgPool_0a_3x3/AvgPool" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/Mixed_4a/Branch_0/Conv2d_0a_1x1/weights/read/_143__cf__149" out_port_id="0"/>
+		<IR id="98" name="FirstStageFeatureExtractor/InceptionV2/Mixed_4a/Branch_0/Conv2d_0a_1x1/weights/read/_143__cf__149/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5c/Branch_3/Conv2d_0b_1x1/weights/read/_6__cf__12" out_port_id="0"/>
+		<IR id="400" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5c/Branch_3/Conv2d_0b_1x1/weights/read/_6__cf__12/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4a/Branch_0/Conv2d_1a_3x3/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="106" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4a/Branch_0/Conv2d_1a_3x3/BatchNorm/FusedBatchNorm/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4b/Branch_1/Conv2d_0a_1x1/Relu" out_port_id="0"/>
+		<IR id="134" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4b/Branch_1/Conv2d_0a_1x1/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/Mixed_3c/Branch_2/Conv2d_0b_3x3/weights/read/_98__cf__104" out_port_id="0"/>
+		<IR id="81" name="FirstStageFeatureExtractor/InceptionV2/Mixed_3c/Branch_2/Conv2d_0b_3x3/weights/read/_98__cf__104/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3c/Branch_1/Conv2d_0b_3x3/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="74" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3c/Branch_1/Conv2d_0b_3x3/BatchNorm/FusedBatchNorm/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4d/Branch_2/Conv2d_0a_1x1/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="217" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4d/Branch_2/Conv2d_0a_1x1/BatchNorm/FusedBatchNorm/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5a/Branch_2/MaxPool_1a_3x3/MaxPool" out_port_id="0"/>
+		<IR id="330" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5a/Branch_2/MaxPool_1a_3x3/MaxPool" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/Mixed_3b/Branch_2/Conv2d_0c_3x3/weights/read/_63__cf__69" out_port_id="0"/>
+		<IR id="49" name="FirstStageFeatureExtractor/InceptionV2/Mixed_3b/Branch_2/Conv2d_0c_3x3/weights/read/_63__cf__69/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4d/Branch_2/Conv2d_0a_1x1/Relu" out_port_id="0"/>
+		<IR id="218" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4d/Branch_2/Conv2d_0a_1x1/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/Conv2d_2c_3x3/weights/read/_47__cf__53" out_port_id="0"/>
+		<IR id="18" name="FirstStageFeatureExtractor/InceptionV2/Conv2d_2c_3x3/weights/read/_47__cf__53/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4a/Branch_1/Conv2d_1a_3x3/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="121" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4a/Branch_1/Conv2d_1a_3x3/BatchNorm/FusedBatchNorm/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5b/Branch_3/Conv2d_0b_1x1/Conv2D" out_port_id="0"/>
+		<IR id="364" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5b/Branch_3/Conv2d_0b_1x1/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4a/Branch_1/Conv2d_0b_3x3/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="116" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4a/Branch_1/Conv2d_0b_3x3/BatchNorm/FusedBatchNorm/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/Mixed_3c/Branch_3/Conv2d_0b_1x1/weights/read/_37__cf__43" out_port_id="0"/>
+		<IR id="92" name="FirstStageFeatureExtractor/InceptionV2/Mixed_3c/Branch_3/Conv2d_0b_1x1/weights/read/_37__cf__43/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4e/Branch_2/Conv2d_0a_1x1/Conv2D" out_port_id="0"/>
+		<IR id="252" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4e/Branch_2/Conv2d_0a_1x1/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/Mixed_4d/Branch_3/Conv2d_0b_1x1/weights/read/_22__cf__28" out_port_id="0"/>
+		<IR id="230" name="FirstStageFeatureExtractor/InceptionV2/Mixed_4d/Branch_3/Conv2d_0b_1x1/weights/read/_22__cf__28/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3c/Branch_3/Conv2d_0b_1x1/Relu" out_port_id="0"/>
+		<IR id="96" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3c/Branch_3/Conv2d_0b_1x1/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3c/Branch_2/Conv2d_0c_3x3/Relu" out_port_id="0"/>
+		<IR id="90" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_3c/Branch_2/Conv2d_0c_3x3/Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4b/Branch_2/Conv2d_0a_1x1/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="143" name="FirstStageFeatureExtractor/InceptionV2/InceptionV2/Mixed_4b/Branch_2/Conv2d_0a_1x1/BatchNorm/FusedBatchNorm/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="SecondStageFeatureExtractor/InceptionV2/Mixed_5a/Branch_1/Conv2d_1a_3x3/Relu" out_port_id="0"/>
+		<IR id="329" name="SecondStageFeatureExtractor/InceptionV2/Mixed_5a/Branch_1/Conv2d_1a_3x3/Relu" out_port_id="1"/>
+	</map>
+</mapping>

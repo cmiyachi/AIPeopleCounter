@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """
  Copyright (c) 2018 Intel Corporation.
-
  Permission is hereby granted, free of charge, to any person obtaining
  a copy of this software and associated documentation files (the
  "Software"), to deal in the Software without restriction, including
@@ -9,10 +8,8 @@
  distribute, sublicense, and/or sell copies of the Software, and to
  permit persons to whom the Software is furnished to do so, subject to
  the following conditions:
-
  The above copyright notice and this permission notice shall be
  included in all copies or substantial portions of the Software.
-
  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
  EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
  MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
@@ -27,6 +24,8 @@ import sys
 import logging as log
 from openvino.inference_engine import IENetwork, IECore
 
+CPU_DEVICE = 'CPU'
+CPU_EXTENSION = '/opt/intel/openvino/deployment_tools/inference_engine/lib/intel64/libcpu_extension_sse4.so'
 
 class Network:
     """
@@ -36,32 +35,92 @@ class Network:
 
     def __init__(self):
         ### TODO: Initialize any class variables desired ###
+        self.plugin = None
+        self.network = None
+        self.input_blob = None
+        self.output_blob = None
+        self.exec_network = None
+        self.infer_request = None
 
-    def load_model(self):
+    def load_model(self, model, console_output=False):
         ### TODO: Load the model ###
+        model_xml = model
+        model_bin = os.path.splitext(model_xml)[0] + ".bin"
+        
+        self.plugin = IECore()
+        self.network = IENetwork(model=model_xml, weights=model_bin)
+
+        if not all_layers_supported(self.plugin, self.network, console_output=console_output):
+            if console_output:
+                print('### Adding cpu extension...')
+            self.plugin.add_extension(CPU_EXTENSION, CPU_DEVICE)
+            if not all_layers_supported(self.plugin, self.network, console_output=console_output):
+                if console_output:
+                    print('ERROR: Not all layers supported with extension!')
+                return
+
+        self.exec_network = self.plugin.load_network(self.network, CPU_DEVICE)
+        if console_output:
+            print('### Network loaded successfully!')
+
+        # Get the input layer
+        self.input_blob = next(iter(self.network.inputs))
+        self.output_blob = next(iter(self.network.outputs))
+
         ### TODO: Check for supported layers ###
         ### TODO: Add any necessary extensions ###
         ### TODO: Return the loaded inference plugin ###
         ### Note: You may need to update the function parameters. ###
-        return
+        return 
+    
 
     def get_input_shape(self):
         ### TODO: Return the shape of the input layer ###
-        return
+        # self.network.inputs[self.input_blob].shape
+        input_shapes = {}
+        for inp in self.network.inputs:
+            input_shapes[inp] = (self.network.inputs[inp].shape)
+        return input_shapes
+    
 
-    def exec_net(self):
+    def exec_net(self, net_input):
         ### TODO: Start an asynchronous request ###
         ### TODO: Return any necessary information ###
         ### Note: You may need to update the function parameters. ###
-        return
+        self.infer_request_handle = self.exec_network.start_async(
+                request_id=0, 
+                inputs=net_input)
+#                 inputs={self.input_blob: input_image})
+        return 
+
 
     def wait(self):
         ### TODO: Wait for the request to be complete. ###
         ### TODO: Return any necessary information ###
         ### Note: You may need to update the function parameters. ###
-        return
+        status = self.infer_request_handle.wait()
+        return status
+    
 
     def get_output(self):
         ### TODO: Extract and return the output results
         ### Note: You may need to update the function parameters. ###
-        return
+        res = self.infer_request_handle.outputs[self.output_blob]
+        return res
+
+
+def all_layers_supported(engine, network, console_output=False):
+    ### TODO check if all layers are supported
+    ### return True if all supported, False otherwise
+    layers_supported = engine.query_network(network, device_name='CPU')
+    layers = network.layers.keys()
+
+    all_supported = True
+    for l in layers:
+        if l not in layers_supported:
+            all_supported = False
+            if console_output:
+                print('### Layer', l, 'is not supported')
+    if all_supported and console_output:
+        print('### All layers supported!')
+    return all_supported

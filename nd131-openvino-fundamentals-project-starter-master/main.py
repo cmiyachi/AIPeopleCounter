@@ -19,13 +19,14 @@
  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 """
 
-
 import os
 import sys
 import time
 import socket
 import json
 import cv2
+import numpy as np
+import datetime
 
 import logging as log
 import paho.mqtt.client as mqtt
@@ -44,7 +45,6 @@ MQTT_KEEPALIVE_INTERVAL = 60
 def build_argparser():
     """
     Parse command line arguments.
-
     :return: command line arguments
     """
     parser = ArgumentParser()
@@ -64,71 +64,196 @@ def build_argparser():
                              "specified (CPU by default)")
     parser.add_argument("-pt", "--prob_threshold", type=float, default=0.5,
                         help="Probability threshold for detections filtering"
-                        "(0.5 by default)")
+                             "(0.5 by default)")
     return parser
 
 
 def connect_mqtt():
-    ### TODO: Connect to the MQTT client ###
-    client = None
-
+    # Connect to the MQTT client
+    client = mqtt.Client()
+    client.connect(MQTT_HOST, MQTT_PORT, MQTT_KEEPALIVE_INTERVAL)
     return client
 
 
-def infer_on_stream(args, client):
+def process(args):
     """
-    Initialize the inference network, stream video to network,
-    and output stats and video.
-
-    :param args: Command line arguments parsed by `build_argparser()`
-    :param client: MQTT client
+    Initialize the inference network, stream video to network, and output stats and video.
+    :param args: Parsed Command line arguments
     :return: None
     """
+
+    if args.input == '0':
+        print('Camera stream not supported')
+        return
+    elif args.input.endswith('.png'):
+        input_type = 'IMAGE'
+    elif args.input.endswith('.mp4'):
+        input_type = 'VIDEO'
+    else:
+        print('Image and video files are supported only')
+        return
+
+    if 'ssd' in args.model:
+        model_type = 'SSD'
+    elif 'faster_rcnn' in args.model:
+        model_type = 'Faster-RCNN'
+    else:
+        print('Unknown model type')
+        return
+
     # Initialise the class
-    infer_network = Network()
-    # Set Probability threshold for detections
-    prob_threshold = args.prob_threshold
+    net = Network()
 
-    ### TODO: Load the model through `infer_network` ###
+    # Load the model
+    net.load_model(args.model)
+    net_input_shape = net.get_input_shape()['image_tensor']
+    net_shape = (net_input_shape[3], net_input_shape[2])
 
-    ### TODO: Handle the input stream ###
+    if input_type == 'IMAGE':
+        process_image(args, net, net_shape, model_type)
 
-    ### TODO: Loop until stream is over ###
+    elif input_type == 'VIDEO':
+        process_video(args, net, net_shape, model_type)
 
-        ### TODO: Read from the video capture ###
+    cv2.destroyAllWindows()
 
-        ### TODO: Pre-process the image as needed ###
 
-        ### TODO: Start asynchronous inference for specified request ###
+def process_video(args, infer_network, infer_network_shape, model_type):
+    # Connect to the MQTT server
+    client_mqtt = connect_mqtt()
 
-        ### TODO: Wait for the result ###
+    # Handle the input stream
+    cap = cv2.VideoCapture(args.input)
+    cap.open(args.input)
+    frame_shape = (int(cap.get(3)), int(cap.get(4)))
 
-            ### TODO: Get the results of the inference request ###
+    counter = 0
+    duration = 0
+    counter_prev = 0
+    duration_prev = 0
+    counter_total = 0
+    counter_report = 0
 
-            ### TODO: Extract any desired stats from the results ###
+    # Loop until stream is over
+    while cap.isOpened():
+        # Read from the video capture
+        flag, frame = cap.read()
+        if not flag:
+            break
 
-            ### TODO: Calculate and send relevant information on ###
-            ### current_count, total_count and duration to the MQTT server ###
-            ### Topic "person": keys of "count" and "total" ###
-            ### Topic "person/duration": key of "duration" ###
+        # inference
+        frame, cnt = infer_on_image(frame, frame_shape, model_type,
+                                    infer_network, infer_network_shape,
+                                    args.prob_threshold)
 
-        ### TODO: Send the frame to the FFMPEG server ###
+        # report duration only once (when person exits scene)
+        duration_report = None
 
-        ### TODO: Write an output image if `single_image_mode` ###
+        # detection only if continues 3 frames or more
+        if cnt != counter:
+            counter_prev = counter
+            counter = cnt
+            if duration >= 3:
+                duration_prev = duration
+                duration = 0
+            else:
+                duration = duration_prev + duration
+                duration_prev = 0  # unknown, not needed in this case
+        else:
+            duration += 1
+            if duration >= 3:
+                counter_report = counter
+                if duration == 3 and counter > counter_prev:
+                    # count as enter scene
+                    counter_total += counter - counter_prev
+                if duration == 3 and counter < counter_prev:
+                    # count as exit scene, report duration in ms (note: FPS = 10)
+                    duration_report = int((duration_prev / 10.0) * 1000)
+
+        # Calculate and send relevant information on
+        # current_count, total_count and duration to the MQTT server
+        # Topic "person": keys of "count" and "total"
+        # Topic "person/duration": key of "duration"
+        client_mqtt.publish('person',
+                            payload=json.dumps({
+                                'count': counter_report, 'total': counter_total}),
+                            qos=0, retain=False)
+        if duration_report is not None:
+            client_mqtt.publish('person/duration',
+                                payload=json.dumps({'duration': duration_report}),
+                                qos=0, retain=False)
+
+        # Attention! Resize to cover for potential bug in the UI
+        # Video size is 768x432, but the UI expects 758x432
+        frame = cv2.resize(frame, (758, 432))
+
+        # Send the frame to the FFMPEG server
+        sys.stdout.buffer.write(frame)
+        sys.stdout.flush()
+
+    cap.release()
+
+
+def process_image(args, infer_network, infer_network_shape, model_type):
+    image = cv2.imread(args.input)
+    image_shape = (image.shape[1], image.shape[0])
+    image, cnt = infer_on_image(image, image_shape, model_type,
+                                infer_network, infer_network_shape,
+                                args.prob_threshold)
+    cv2.imwrite('out.png', image)
+
+
+def infer_on_image(frame, frame_shape, model_type, infer_network, infer_network_shape, prob_threshold):
+    # Pre-process the image
+    net_image = cv2.resize(frame, infer_network_shape)
+    net_image = net_image.transpose((2, 0, 1))
+    net_image = net_image.reshape(1, *net_image.shape)
+
+    # Start asynchronous inference
+    if model_type == 'SSD':
+        net_input = {
+            'image_tensor': net_image
+        }
+    elif model_type == 'Faster-RCNN':
+        net_input = {
+            'image_tensor': net_image,
+            'image_info': net_image.shape[1:]
+        }
+
+    num_detected = 0
+    infer_network.exec_net(net_input)
+
+    # Wait for the result
+    if infer_network.wait() == 0:
+
+        # Get the results of the inference request
+        net_output = infer_network.get_output()
+
+        # Extract any desired stats from the results
+        # 1x1x100x7
+
+        probs = net_output[0, 0, :, 2]
+        for i, p in enumerate(probs):
+            if p > prob_threshold:
+                num_detected += 1
+                box = net_output[0, 0, i, 3:]
+                p1 = (int(box[0] * frame_shape[0]), int(box[1] * frame_shape[1]))
+                p2 = (int(box[2] * frame_shape[0]), int(box[3] * frame_shape[1]))
+                frame = cv2.rectangle(frame, p1, p2, (0, 0, 255), 3)
+
+    # Return the number of detected objects (drawn boxes)
+    return frame, num_detected
 
 
 def main():
     """
     Load the network and parse the output.
-
     :return: None
     """
     # Grab command line args
     args = build_argparser().parse_args()
-    # Connect to the MQTT server
-    client = connect_mqtt()
     # Perform inference on the input stream
-    infer_on_stream(args, client)
+    process(args)
 
 
 if __name__ == '__main__':
