@@ -42,7 +42,7 @@ class Network:
         self.exec_network = None
         self.infer_request = None
 
-    def load_model(self, model, console_output=False):
+    def load_model(self, model, console_output=True):
         ### load the model ###
         model_xml = model
         model_bin = os.path.splitext(model_xml)[0] + ".bin"
@@ -60,8 +60,8 @@ class Network:
                 return
 
         self.exec_network = self.plugin.load_network(self.network, CPU_DEVICE)
-        if console_output:
-            print('### Network loaded successfully!')
+        # if console_output:
+        print('### Network loaded successfully!')
 
         # Get the input layer
         self.input_blob = next(iter(self.network.inputs))

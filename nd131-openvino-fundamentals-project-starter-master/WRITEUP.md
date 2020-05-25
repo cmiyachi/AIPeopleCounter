@@ -22,11 +22,17 @@ Some of the potential reasons for handling custom layers are that they may be ne
 ## Comparing Model Performance
 
 My method(s) to compare models before and after conversion to Intermediate Representations
-were to time the process for each run. 
+were to time the process for each run where to print the time at the beginning and end of each run.  
 
 The difference between model accuracy pre- and post-conversion was...
 
-The size of the model pre- and post-conversion was...
+The size of the model pre- and post-conversion are shown below.  There are also XML and Mapping files produced from the conversion but those in the hundres of KB range. 
+
+| Model         | Pre  (*.pb)         | Post  (*.bin)|
+| ------------- |:-------------:| -----:|
+| faster_rcnn_inception_v2_coco    | 57.2 MB | 53.2 MB |
+| ssd_inception_v2_coco_2018_01_28      | 102 MB      |   100.1 MB  | 
+
 
 The inference time of the model pre- and post-conversion was...
 
@@ -49,11 +55,16 @@ a successful model.]
 
 In investigating potential people counter models, I tried each of the following three models:
 
-- Model 1: [Name]
+- Model 1: [model/faster_rcnn_inception_v2_coco.xml]
   - [Model Source]
   - I converted the model to an Intermediate Representation with the following arguments...
   - The model was insufficient for the app because...
   - I tried to improve the model for the app by...
+<p align="center">
+  <img src="images/faster_rcnn_inception_v2_coco.png" title="faster_rcnn_inception_v2_coco">
+ 
+</p>
+
   
 - Model 2: [Name]
   - [Model Source]

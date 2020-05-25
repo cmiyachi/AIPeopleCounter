@@ -109,10 +109,10 @@ def process(args):
     net_input_shape = net.get_input_shape()['image_tensor']
     net_shape = (net_input_shape[3], net_input_shape[2])
 
-    #if input_type == 'IMAGE':
-      #  process_image(args, net, net_shape, model_type)
+    if input_type == 'IMAGE':
+        process_image(args, net, net_shape, model_type)
 
-    if input_type == 'VIDEO':
+    elif input_type == 'VIDEO':
         process_stream(args, net, net_shape, model_type)
 
     cv2.destroyAllWindows()
@@ -170,13 +170,9 @@ def process_stream(args, infer_network, infer_network_shape, model_type):
                     # count as exit scene, report duration in ms (note: FPS = 10)
                     duration_report = int((duration_prev / 10.0) * 1000)
 
-        # Calculate and send relevant information on
-        # current_count, total_count and duration to the MQTT server
-        # Topic "person": keys of "count" and "total"
-        # Topic "person/duration": key of "duration"
         client_mqtt.publish('person',
                             payload=json.dumps({
-                                'count': counter_report, 'total': counter_total}),
+                                'count': counter_report}), #, 'total': counter_total}),
                             qos=0, retain=False)
         if duration_report is not None:
             client_mqtt.publish('person/duration',
@@ -185,7 +181,7 @@ def process_stream(args, infer_network, infer_network_shape, model_type):
 
         # Attention! Resize to cover for potential bug in the UI
         # Video size is 768x432, but the UI expects 758x432
-        frame = cv2.resize(frame, (768, 432))
+        # frame = cv2.resize(frame, (768, 432))
 
         # Send the frame to the FFMPEG server
         sys.stdout.buffer.write(frame)
@@ -193,7 +189,7 @@ def process_stream(args, infer_network, infer_network_shape, model_type):
 
     cap.release()
 
-"""
+
 def process_image(args, infer_network, infer_network_shape, model_type):
     image = cv2.imread(args.input)
     image_shape = (image.shape[1], image.shape[0])
@@ -201,7 +197,6 @@ def process_image(args, infer_network, infer_network_shape, model_type):
                                 infer_network, infer_network_shape,
                                 args.prob_threshold)
     cv2.imwrite('out.png', image)
-"""
 
 def infer_on_image(frame, frame_shape, model_type, infer_network, infer_network_shape, prob_threshold):
     # Pre-process the image
@@ -251,6 +246,7 @@ def main():
     :return: None
     """
     # Grab command line args
+    print('*** Starting Program ******')
     args = build_argparser().parse_args()
     # Perform inference on the input stream
     process(args)
