@@ -43,10 +43,7 @@ MQTT_KEEPALIVE_INTERVAL = 60
 
 
 def build_argparser():
-    """
-    Parse command line arguments.
-    :return: command line arguments
-    """
+   
     parser = ArgumentParser()
     parser.add_argument("-m", "--model", required=True, type=str,
                         help="Path to an xml file with a trained model.")
@@ -76,11 +73,6 @@ def connect_mqtt():
 
 
 def process(args):
-    """
-    Initialize the inference network, stream video to network, and output stats and video.
-    :param args: Parsed Command line arguments
-    :return: None
-    """
 
     if args.input == '0':
         print('Camera stream not supported')
@@ -146,10 +138,10 @@ def process_stream(args, infer_network, infer_network_shape, model_type):
                                     infer_network, infer_network_shape,
                                     args.prob_threshold)
 
-        # report duration only once (when person exits scene)
+        # person exits scene)
         duration_report = None
 
-        # detection only if continues 3 frames or more
+        # continues 3 frames or more
         if cnt != counter:
             counter_prev = counter
             counter = cnt
@@ -172,16 +164,12 @@ def process_stream(args, infer_network, infer_network_shape, model_type):
 
         client_mqtt.publish('person',
                             payload=json.dumps({
-                                'count': counter_report}), #, 'total': counter_total}),
+                                'count': counter_report,'total': counter_total}),
                             qos=0, retain=False)
         if duration_report is not None:
             client_mqtt.publish('person/duration',
                                 payload=json.dumps({'duration': duration_report}),
                                 qos=0, retain=False)
-
-        # Attention! Resize to cover for potential bug in the UI
-        # Video size is 768x432, but the UI expects 758x432
-        # frame = cv2.resize(frame, (768, 432))
 
         # Send the frame to the FFMPEG server
         sys.stdout.buffer.write(frame)
@@ -218,14 +206,10 @@ def infer_on_image(frame, frame_shape, model_type, infer_network, infer_network_
     num_detected = 0
     infer_network.exec_net(net_input)
 
-    # Wait for the result
+    # Wait
     if infer_network.wait() == 0:
 
-        # Get the results of the inference request
         net_output = infer_network.get_output()
-
-        # Extract any desired stats from the results
-        # 1x1x100x7
 
         probs = net_output[0, 0, :, 2]
         for i, p in enumerate(probs):
@@ -236,19 +220,15 @@ def infer_on_image(frame, frame_shape, model_type, infer_network, infer_network_
                 p2 = (int(box[2] * frame_shape[0]), int(box[3] * frame_shape[1]))
                 frame = cv2.rectangle(frame, p1, p2, (0, 0, 255), 3)
 
-    # Return the number of detected objects (drawn boxes)
+    # Return the number of ddrawn boxes
     return frame, num_detected
 
 
 def main():
-    """
-    Load the network and parse the output.
-    :return: None
-    """
+
     # Grab command line args
     print('*** Starting Program ******')
     args = build_argparser().parse_args()
-    # Perform inference on the input stream
     process(args)
 
 
